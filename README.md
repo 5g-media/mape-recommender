@@ -47,7 +47,7 @@ To build the docker image, copy the bash script included in the `bash_scripts/` 
 
 The deployment can be done  using either the docker engine by passing the proper env variables or docker-compose in the [MAPE](https://github.com/5g-media/mape) repository.
 
-`TODO`: describe the deployemnt using docker engine
+`TODO`: describe the deployment using docker engine
 
 
 ## Usage
