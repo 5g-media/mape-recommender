@@ -1,0 +1,14 @@
+certifi==2018.4.16
+chardet==3.0.4
+idna==2.6
+influxdb==5.2.0
+redis==3.0.1
+requests==2.18.4
+requests>=2.20.0
+urllib3>=1.24.2
+pytz==2018.9
+python-dateutil==2.8.0
+python-redmine==2.2.1
+PyYAML==5.1
+graypy==2.1.0
+kafka-python==1.4.2
