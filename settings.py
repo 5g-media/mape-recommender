@@ -13,9 +13,9 @@ SCHEDULER_MINUTES = os.environ.get("SCHEDULER_MINUTES", 30)  # minutes
 # REDMINE SETTINGS
 # =================================
 REDMINE = {
-    'BASE_URL': "http://{}/".format(os.environ.get('REDMINE_BASE_URL', '217.172.11.172')),
+    'BASE_URL': "http://{}/".format(os.environ.get('REDMINE_BASE_URL', '192.168.1.175')),
     'USER': os.environ.get('REDMINE_USER', 'svp'),
-    'PASSWORD': os.environ.get('REDMINE_PASSWORD', '5gmediasvp'),
+    'PASSWORD': os.environ.get('REDMINE_PASSWORD', 'password'),
     'PROJECT_NAME': os.environ.get("REDMINE_PROJECT_NAME", 'resource-recommendations'),
     'SCALING_PROJECT_NAME': 'scaling-groups-capacity'
 }
@@ -29,8 +29,8 @@ INFLUX_DATABASES = {
         'ENGINE': 'influxdb',
         'NAME': os.environ.get("INFLUXDB_DB_NAME", 'monitoring'),
         'USERNAME': os.environ.get("INFLUXDB_USER", 'root'),
-        'PASSWORD': os.environ.get("INFLUXDB_PWD", 'root'),
-        'HOST': os.environ.get("INFLUXDB_IP", "217.172.11.173"),
+        'PASSWORD': os.environ.get("INFLUXDB_PWD", 'password'),
+        'HOST': os.environ.get("INFLUXDB_IP", "192.168.1.175"),
         'PORT': os.environ.get("INFLUXDB_PORT", 8086)
     }
 }
@@ -38,9 +38,9 @@ INFLUX_DATABASES = {
 # =================================
 # OSM SETTINGS
 # =================================
-OSM_IP = os.environ.get("OSM_IP", "217.172.11.188")
+OSM_IP = os.environ.get("OSM_IP", "192.168.1.175")
 OSM_ADMIN_CREDENTIALS = {"username": os.environ.get("OSM_USER", "admin"),
-                         "password": os.environ.get("OSM_PWD", "admin")}
+                         "password": os.environ.get("OSM_PWD", "password")}
 OSM_COMPONENTS = {"UI": 'http://{}:80'.format(OSM_IP),
                   "NBI-API": 'https://{}:9999'.format(OSM_IP),
                   "RO-API": 'http://{}:9090'.format(OSM_IP)}
@@ -53,7 +53,7 @@ OSM_KAFKA_GROUP_ID = '5GMEDIA_RECOMMENDATION_CG'
 # =================================
 # GRAYLOG SETTINGS
 # =================================
-GRAYLOG_HOST = os.environ.get("GRAYLOG_HOST", '217.172.11.172')
+GRAYLOG_HOST = os.environ.get("GRAYLOG_HOST", '192.168.1.175')
 GRAYLOG_PORT = int(os.environ.get("GRAYLOG_PORT", 12201))
 
 # =================================
